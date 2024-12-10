@@ -1,0 +1,61 @@
+.layout-container {
+	display: flex;
+	min-height: 100vh;
+}
+
+.sidebar-container {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}≠
+
+.sidebar-collapse {
+	height: 100%;
+}
+
+.sidebar-collapse :global(.MuiCollapse-wrapperInner) {
+	height: 100%;
+}
+
+.sidebar-content {
+	height: 100%;
+	background: #000033;
+	width: 240px;
+}
+
+.toggle-button {
+	position: absolute;
+	right: -20px;
+	top: 85%;
+	transform: translateY(-50%);
+	background: #000033;
+	color: white;
+	width: 40px;
+	height: 40px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	border: 2px solid rgba(255, 255, 255, 0.1);
+	z-index: 1200;
+}
+
+.toggle-button:hover {
+	background: #000044;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-button :global(.MuiTouchRipple-root) {
+	display: none;
+}
+
+.toggle-button :global(.MuiSvgIcon-root) {
+	font-size: 28px;
+}
+
+.main-content {
+	flex-grow: 1;
+	padding: 20px;
+	transition: margin-left 0.3s ease;
+}
